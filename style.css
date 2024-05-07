@@ -1,0 +1,58 @@
+body {
+  background-color: #ddd; /* Сірий фон */
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.sample-block {
+  display: inline-block; /* Дисплей inline-block */
+  width: 200px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Тінь */
+  background-color: #fff;
+  margin: 20px;
+  text-align: center;
+  position: relative; /* Потрібно для позиціонування псевдоелементу */
+}
+
+.sample-block h2 {
+  text-shadow: 1px -1px 0 #fff, 1px 1px 0 #333; /* Тінь для заголовка */
+}
+
+.sample-block p {
+  font-size: 14px;
+}
+
+.sample-block::before {
+  content: '';
+  position: absolute;
+  top: -10px; /* Зміщення наклейки вгору */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0.1); /* Напівпрозорий колір фону */
+  border-radius: 10px 10px 0 0; /* Округлення тільки вверху */
+}
+
+/* Додаткові стилі для наведення курсора */
+.sample-block:hover {
+  transform: translateY(-5px); /* Зміщення блоку при наведенні */
+}
+
+.sample-block:hover::before {
+  background-color: rgb(0, 0, 0); /* Зміна кольору наклейки при наведенні */
+}
+
+/* Медіа-запит для адаптивного дизайну */
+@media (max-width: 600px) {
+  .sample-block {
+      width: 100%; /* Робимо блоки на повний розмір при малому екрані */
+      margin: 10px 0;
+  }
+}

@@ -1,48 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stickers</title>
-  <link rel="stylesheet" href="Style.css">
-  <link rel="stylesheet" href="css/style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stickers</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Sample Blocks</title>
+    <style>
+        body {
+            background-color: #ddd; /* Сірий фон */
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .sample-block {
+            display: inline-block; /* Дисплей inline-block */
+            width: 200px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Тінь */
+            background-color: #fff;
+            margin: 20px;
+            text-align: center;
+        }
+        
+        .sample-block h2 {
+            text-shadow: 1px -1px 0 #fff, 1px 1px 0 #333; /* Тінь для заголовка */
+        }
+        
+        .sample-block p {
+            font-size: 14px;
+        }
+        
+        .sample-block::before {
+            content: '';
+            display: block; /* Блочний псевдоелемент */
+            width: 100px;
+            height: 20px;
+            background-color: rgba(0, 0, 0, 0.1); /* Напівпрозорий колір фону */
+            border-radius: 10px 10px 0 0; /* Округлення тільки вверху */
+            margin: -10px auto 0; /* Переміщення вгору та центру */
+        }
+    </style>
 </head>
 <body>
-<div class="sticker-container">
-  <div class="sticker">
-    <div class="sticker-content">Sample 1 </div>
-    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Sed ut perspiciatis unde omnis iste natus error sit
-      voluptatem accusantium doloremque laudantium, totam rem aperiam,
-      eaque ipsa quae ab illo inventore veritatis et quasi
-      architecto beatae vitae dicta sunt explicabo.
-      Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit ,
-      sed quia consequuntur magni dolores eos qui
-      ratione voluptatem sequi nesciunt.</div>
-  </div>
-  <div class="sticker">
-    <div class="sticker-content">Sample 2</div>
-    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Sed ut perspiciatis unde omnis iste natus error sit
-      voluptatem accusantium doloremque laudantium, totam rem aperiam,
-      eaque ipsa quae ab illo inventore veritatis et quasi
-      architecto beatae vitae dicta sunt explicabo.
-      Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit ,
-      sed quia consequuntur magni dolores eos qui
-      ratione voluptatem sequi nesciunt.</div>
-  </div>
-  <div class="sticker">
-    <div class="sticker-content">Sample 3</div>
-    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Sed ut perspiciatis unde omnis iste natus error sit
-      voluptatem accusantium doloremque laudantium, totam rem aperiam,
-      eaque ipsa quae ab illo inventore veritatis et quasi
-      architecto beatae vitae dicta sunt explicabo.
-      Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit ,
-      sed quia consequuntur magni dolores eos qui
-      ratione voluptatem sequi nesciunt.</div>
-  </div>
-</div>
+    <div class="sample-block">
+        <h2>Зразок 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+
+    <div class="sample-block">
+        <h2>Зразок 2</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+
+    <div class="sample-block">
+        <h2>Зразок 3</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
 </body>
 </html>
